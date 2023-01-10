@@ -1,18 +1,14 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Header from "./Components/Header";
 import FeedbackList from "./Components/FeedbackList";
-import FeedbackData from "./Data/Feedback";
 import FeedbackStats from "./Components/FeedbackStats";
 import FeedbackForm from "./Components/FeedbackForm";
 import About from "./Pages/About";
 import AboutIconLink from "./Components/AboutIconLink";
 import { FeedbackProvider } from "./Context/FeedbackContext";
 
-function App() {
-  const [feedback, setFeedback] = useState(FeedbackData);
-  
+function App() {  
   return (
     <FeedbackProvider>
       <Router>
